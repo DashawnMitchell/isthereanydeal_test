@@ -11,9 +11,6 @@ class Homepage {
         this.getSearchButton = page.getByRole('button', {name: 'Search'});
         this.getSearchBar = page.getByPlaceholder('Search game, bundle, giveaway');
         this.getSearchBarCloseBtt = page.locator('[class^="modal-close"]');
-
-        // this.getIsThereAnyDealLink = page.locator('span', {hasText: 'IsThereAny'});
-        // this.getNewInSubscriptions = page.locator('h2', {hasText:'New in Subscriptions'});
     }
 
     async goto() {
@@ -31,12 +28,6 @@ class Homepage {
 
     async navigateToTopGame() {
         await this.getAllGamesLinksWithImgs.first().click();
-
-        //  await this.getAllLinks
-        // .filter({has: this.page.getByRole('img')})
-        // .filter({hasText: /^\s*$/})
-        // .first()
-        // .click();
     }
 
     async navigateToRandomGame() {
