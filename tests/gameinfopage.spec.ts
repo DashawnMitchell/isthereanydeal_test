@@ -37,7 +37,7 @@ test('Switching to the Stats Tab and confirming expected headers and data charts
     await expect( gamePage.getStatsTabCollectionHeadLine).toBeVisible();
     await expect( gamePage.getStatsTabPriceLimitHeadLine).toBeVisible();
     await expect( gamePage.getStatsTabCutLimitHeadLine).toBeVisible();
-    await expect( gamePage.getTotalMainCharts()).toBeGreaterThan(1);
+    await expect( await gamePage.getTotalMainCharts()).toBeGreaterThan(1);
     await page.screenshot({ path: `screenshot/GameInfoStatsPage.png` });
 });
 
